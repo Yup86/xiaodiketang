@@ -8,13 +8,13 @@
 
 package exception.CustomException;
 
-
+// 需要继承Exception， 重写一些方法
 public class UserNotEnoughException extends Exception{
     private int code;
     private String message;
     
     public UserNotEnoughException(){
-        //必须是第一行
+        //super()必须是第一行
         super();
     }
 

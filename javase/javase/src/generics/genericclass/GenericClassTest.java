@@ -28,5 +28,22 @@ public class GenericClassTest {
         if(genericInteger instanceof Generic){
             System.out.println("it is the instance of the last thing");
         }
+
+        Generic<Integer> gInteger = new Generic<Integer>(123);
+        Generic<Number> gNumber = new Generic<Number>(456);
+
+        showKeyValue(gNumber);
+        showKeyValue1(gNumber);
+
     }
+
+    public static void showKeyValue(Generic<Number> obj){
+        System.out.println(obj.getKey());
+    }
+
+    public static void showKeyValue1(Generic<?> obj){
+        System.out.println(obj.getKey());
+    }
+
+    
 }
